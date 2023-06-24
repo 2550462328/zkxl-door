@@ -1,37 +1,67 @@
-# Shkjem
+# Shanghai kejian engineering management
 
-#### 介绍
-中科企业官网
+> 科健工程管理有限公司企业官网 前端
 
-#### 软件架构
-软件架构说明
+一个业余时间（三周）的外包项目 最终成品：<http://www.shkjem.com>
+主分支已更新至改进版，老版本源码移至 Release  
 
+如果是学习的话推荐学习新版本 链接 <http://kejian.filog.cn/>
+另外有些同学在问后端的代码 这里 <https://github.com/ifzc/KeJian.Core.Api>
 
-#### 安装教程
+## 新版本改进
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. 整体重构，结构升级为最新 vue-cli
+2. 代码优化，去除引用的静态js文件
+3. 图片加载加入懒加载，整体性能提升很大
+4. 视频采用 vue-video-player 处理兼容性
+5. 首页全屏滚动样式由静态文件 fullpage.js 改为 vue-awesome-swiper
+6. 样式调整，提升了自适应能力
 
-#### 使用说明
+## 组件列表
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. vue-router
+2. element-ui
+3. axios
+4. vue-video-player (视频组件)
+5. vue-awesome-swiper (首页滚动组件)
+6. vue-lazyload (图片懒加载)
 
-#### 参与贡献
+## Project setup
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+``` powershell
+npm install
+```
+    
+### Compiles and hot-reloads for development
 
+```powershell
+npm run serve
+```
 
-#### 特技
+### Compiles and minifies for production
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+```powershell
+npm run build
+```
+
+### Docker
+
+> 使用 Docker 发布镜像至镜像服务器
+> 镜像地址（可拉取）：ccr.ccs.tencentyun.com/ifengzctest/kjweb:v1
+
+```powershell
+# 第一步构建镜像
+docker build -t fengzctest.kjweb:v1 .
+
+# 第二部登录镜像仓库
+docker login --username 100001190206 ccr.ccs.tencentyun.com
+
+# 查看镜像列表
+docker images
+
+# 添加Tag
+docker tag [ImageId] ccr.ccs.tencentyun.com/ifengzctest/kjweb:v1 
+
+# 推送镜像至镜像服务器
+docker push ccr.ccs.tencentyun.com/ifengzctest/kjweb:[tag]
+```
