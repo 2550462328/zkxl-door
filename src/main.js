@@ -1,3 +1,11 @@
+/*
+ * @Author: huizhang43 huizhang43@iflytek.com
+ * @Date: 2023-06-27 10:03:14
+ * @LastEditors: huizhang43 huizhang43@iflytek.com
+ * @LastEditTime: 2023-06-27 15:50:32
+ * @FilePath: \zkxl-door\src\main.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -34,11 +42,11 @@ Vue.config.productionTip = false
 axios.defaults.timeout = 5000
 //设置api地址
 //全局定义axios
-axios.defaults.baseURL = 'http://shkjgw.shkjem.com/api/'
+axios.defaults.baseURL = '/backend/api/'
 Vue.prototype.$http = axios
 
 // 图片服务器地址
-Vue.prototype.imgserver = 'http://shkjgw.shkjem.com/'
+Vue.prototype.imgserver = '/backend/'
 
 new Vue({
   router,
