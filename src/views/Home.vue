@@ -26,7 +26,7 @@
           <li
             v-for="(item, index) in caseList"
             :key="index"
-            v-lazy:background-image="imgserver + item.Img"
+            v-lazy:background-image="item.src"
           >
             <router-link
               class="text-decoration"
@@ -49,29 +49,13 @@
           <p>Latest News</p>
         </div>
         <div class="news-content">
-          <div class="news-content-item" v-for="(news, i) in newsList" :key="i">
-            <div :style="'order: ' + (i % 2 == 0 ? 1 : 3)">
-              <router-link
-                class="text-decoration"
-                :to="{ name: 'newsdetails', params: { id: news.Id } }"
-              >
-                <div
-                  class="item-img"
-                  v-lazy:background-image="imgserver + news.Img"
-                ></div>
-              </router-link>
+          <div class="news-content-box">
+            <div class="news-content-item" v-for="(news, i) in newsList" :key="i">
+              <img :src="news.src" alt="">
+              <div class="news-content-item-title">{{ news.title }}</div>
+              <div class="link">Read More</div>
             </div>
-            <div style="order: 2">
-              <el-divider>
-                <i class="el-icon-apple"></i>
-              </el-divider>
-            </div>
-            <div class="item-content" :style="'order: ' + (i % 2 == 0 ? 3 : 1)">
-              <h3>{{ news.Title }}</h3>
-              <p>{{ news.Content }}</p>
-              <span>{{ news.CreateTime }}</span>
-            </div>
-          </div>
+          </div>         
         </div>
       </swiper-slide>
       <div slot="pagination" class="swiper-pagination"></div>
@@ -91,8 +75,42 @@ export default {
   data() {
     return {
       loading: true,
-      caseList: [],
-      newsList: [],
+      caseList: [
+        {
+          'src': require('../assets/image/solution1.png'),
+          'title': "",
+        },
+        {
+          'src': require('../assets/image/solution2.png'),
+          'title': "",
+        },
+        {
+          'src': require('../assets/image/solution3.png'),
+          'title': "",
+        }
+      ],
+      newsList: [
+        {
+          'src': require('../assets/image/production1.png'),
+          'title': "基于物联网的医废称重器",
+        },
+        {
+          'src': require('../assets/image/production2.png'),
+          'title': "蓝牙便捷式医废称重器",
+        },
+        {
+          'src': require('../assets/image/production3.png'),
+          'title': "危废称重一体化终端控制箱",
+        },
+        {
+          'src': require('../assets/image/production4.png'),
+          'title': "智能物联网电子磅秤",
+        },
+        {
+          'src': require('../assets/image/production5.png'),
+          'title': "边缘计算智能分析盒子",
+        },
+      ],
       swiperOption: {
         notNextTick: true, //notNextTick是一个组件自有属性，如果notNextTick设置为true，组件则不会通过NextTick来实例化swiper，也就意味着你可以在第一时间获取到swiper对象，假如你需要刚加载遍使用获取swiper对象来做什么事，那么这个属性一定要是true
         direction: "vertical", //水平方向移动
@@ -141,18 +159,7 @@ export default {
     },
   },
   mounted() {
-    this.$http
-      .all([
-        this.$http.get("Cases/GetCasesAll"),
-        this.$http.get(`News?type=1&num=3`),
-      ])
-      .then(
-        this.$http.spread((responseCases, responseNews) => {
-          this.caseList = responseCases.data;
-          this.newsList = responseNews.data;
-          this.loading = false;
-        })
-      );
+    this.loading = false;
   },
 };
 </script>
@@ -187,7 +194,7 @@ export default {
   }
 
   .slogan {
-    outline: 1px groove #fff;
+    outline: 1px solid #fff;
     display: flex;
     width: 190px;
     margin: 0px auto;
@@ -200,7 +207,7 @@ export default {
     padding: 20px 20px 10px 20px;
     font-weight: 200;
     color: #fff;
-
+    text-shadow:2px 2px #000;
     p {
       margin-bottom: 10px;
     }
@@ -281,86 +288,52 @@ export default {
 //   background: seashell;
 // }
 .slide-one {
-  background: url(../assets/img/home_top.jpg) no-repeat center;
+  background: url(../assets/image/bg1.png) no-repeat center;
   background-size: cover;
 }
 .slide-two {
-  background: url(../assets/img/home_do.jpg) no-repeat center;
+  background: url(../assets/image/bg2.jpg) no-repeat center;
   background-size: cover;
 }
 .slide-three {
-  background: url(../assets/img/home_anli.jpg) no-repeat center;
+  background: url(../assets/image/bg3.jpg) no-repeat center;
   background-size: cover;
+  .page {
+    margin-top: 50px;
+  }
 }
 //最新资讯
 .news-content {
-  width: 1240px;
+  width: 1200px;
   margin: 0 auto;
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-
-  &-item {
-    width: 400px;
+  margin-top: 20px;
+  
+  .news-content-box{
+    margin-left: -26px;
     display: flex;
-    flex-direction: column;
-
-    .item-img {
-      width: 360px;
-      height: 230px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      background-origin: content-box;
-      margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .news-content-item{
+    width: 380px;
+    height: 310px;
+    margin-bottom: 24px;
+    margin-left: 26px;
+    background: #fff;
+    border: 1px #797882 solid;
+    box-sizing: border-box;
+    padding: 26px 30px;
+    .news-content-item-title{
+      margin-top: 10px;
     }
-    .el-divider {
-      background-color: #fff;
-      height: 3px;
-      .el-divider__text {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        padding: 0px;
-        color: #fff;
-      }
-    }
-    .item-content {
-      width: 360px;
-      height: 230px;
-      margin: 0 auto;
-      //border: 1px solid paleturquoise;
-      h3 {
-        font-size: 22px;
-        height: 30px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-      p {
-        font-size: 15px;
-        height: 80px;
-        overflow: hidden;
-        margin: 10px 0;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        white-space: normal !important;
-        word-wrap: break-word;
-      }
-      span {
-        display: block;
-        font-size: 14px;
-        text-align: end;
-      }
-      h3,
-      p,
-      span {
-        color: #fff;
-      }
+    .link{
+      display: inline-block;
+      margin-top: 65px;
+      color: #4d81ad;
+      border-bottom: 2px #4d81ad solid;
+      cursor: pointer;
     }
   }
+  
 }
 .order {
   order: -1;
