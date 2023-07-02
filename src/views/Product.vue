@@ -1,107 +1,239 @@
 <template>
   <div class="product">
-    <banner img="../assets/img/bgtop.jpg" title="产品中心" />
-    <div class="product-content" v-loading="loading">
-      <div class="p-video">
-        <video-player
-          class="video-player vjs-custom-skin"
-          ref="videoPlayer"
-          :playsinline="true"
-          :options="playerOptions"
-        ></video-player>
-      </div>
-      <div class="lacking">
-        <h3 class="title">传统管理模式不足</h3>
-        <div class="lacking-bottom">
-          <div class="lacking-bottom-item">
-            <div class="lacking-bottom-item-img">
-              <img src="../assets/img/product-group-icon_3.png" alt />
+    <div class="banner">
+      <div>产品中心</div>
+    </div>
+    <div class="product-content ">
+      <div class="one module">
+        <div class="main">
+          <div class="title">蓝牙便携式医废称重器</div>
+          <div class="bd">
+            <div class="img"><img src="../assets/image/page5/1-02.png" alt=""></div>
+            <div class="text">
+              <p>精确度：3级，n=3000</p>
+              <p>显示：LCD液晶显示</p>
+              <p>电源：3.7V1500mAh锂聚合物电池</p>
+              <p>通讯接口：蓝牙4.0，与PDA，APP、小程序匹配</p>
+              <p>称重范围：0-50KG</p>
+              <p>尺寸：166X127X28.5mm</p>
+              <p>环境支持：工作温度-10℃至40℃，存储温度-22℃至55℃</p>
             </div>
-            <p>质量检查、安全检查以抽查为主，难免存在遗漏，留下质量安全隐患。</p>
-          </div>
-
-          <div class="lacking-bottom-item">
-            <div class="lacking-bottom-item-img">
-              <img src="../assets/img/product-group-icon_2.png" alt />
-            </div>
-            <p>数据统计、数据分析的缺失，无法为统计、分析、项目评估等工作提供数据支撑。</p>
-          </div>
-
-          <div class="lacking-bottom-item">
-            <div class="lacking-bottom-item-img">
-              <img src="../assets/img/product-group-icon_1.png" alt />
-            </div>
-            <p>检查工作和检查记录文件脱节，无法做到同步对应；缺少影像文档，无法做到可追溯性。</p>
           </div>
         </div>
       </div>
-      <!-- 平台目标 -->
-      <div class="target">
-        <h3 class="title">平台目标</h3>
-        <p class="eTitle">TARGET</p>
-        <div class="target-img">
-          <img src="../assets/img/product_group_3_img.png" alt />
+      <div class="one module">
+        <div class="main">
+          <div class="title">基于物联网的医废称重器</div>
+          <div class="bd">
+            <div class="img"><img src="../assets/image/page5/1-03.png" alt=""></div>
+            <div class="text">
+              <p>操作系统：安卓7.1</p>
+              <p>屏幕尺寸：10.1寸电容屏，分辨率16：10</p>
+              <p>容量：RAM(ROM) 2G+8G</p>
+              <p>通讯传输：能支持4/3/2G、wifi、蓝牙功能</p>
+              <p>秤盘：碳钢烤漆加不锈钢秤盘</p>
+              <p>量程：大于等于1500kg</p>
+              <p>精度：小于等于10g</p>
+              <p>环境支持：工作温度-20℃至50℃，存储温度-30℃至60℃</p>
+            </div>
+          </div>
         </div>
       </div>
-      <!--功能模块  -->
-      <div class="modular">
-        <h3 class="title">功能模块</h3>
-        <p class="eTitle">MODULAR</p>
-        <div class="modular-content">
-          <div class="modular-content-same">
-            <div class="same-item">
-              <div class="same-item-img">
-                <img src="../assets/img/product-group_4-icon_1.png" alt />
-              </div>
-              <p>质量控制模块</p>
-            </div>
-            <div class="same-item">
-              <div class="same-item-img">
-                <img src="../assets/img/product-group_4-icon_2.png" alt />
-              </div>
-              <p>知识仓库模块</p>
-            </div>
-            <div class="same-item">
-              <div class="same-item-img">
-                <img src="../assets/img/product-group_4-icon_3.png" alt />
-              </div>
-              <p>信息流程模块</p>
-            </div>
-            <div class="same-item">
-              <div class="same-item-img">
-                <img src="../assets/img/product-group_4-icon_1.png" alt />
-              </div>
-              <p>定位复核模块</p>
+      <div class="one module">
+        <div class="main">
+          <div class="title">危废称重一体化终端控制箱</div>
+          <div class="bd">
+            <div class="img"><img src="../assets/image/page5/1-04.png" alt=""></div>
+            <div class="text">
+              <p>适用场景：年产废量大于10吨企业</p>
+              <p>防水防尘等级：IP65</p>
+              <p>操作系统：安卓7.1</p>
+              <p>屏幕尺寸：10.1寸电容屏，分辨率16：10</p>
+              <p>容量：RAM(ROM) 2G+8G</p>
+              <p>通讯传输：能支持4/3/2G、wifi、蓝牙功能</p>
+              <p>打印机：内置热敏(碳带)打印机</p>
+              <p>仪表：LCD液晶</p>
+              <p>尺寸：W*H*D500X630X480mm</p>
+              <p>外界设备：可绑定无线手持扫码枪</p>
+              <p>环境支持：工作温度-20℃至50℃，存储温度-30℃至60℃</p>
             </div>
           </div>
-          <div class="modular-content-center">
-            <img src="../assets/img/product_group_4_img.png" alt />
+        </div>
+      </div>
+      <div class="one module">
+        <div class="main">
+          <div class="title">智能物联网电子磅秤</div>
+          <div class="bd" style="align-items: center;">
+            <div class="img"><img src="../assets/image/page5/1-05.png" alt=""></div>
+            <div class="text">
+              <p>准确度：3级,n=3000；</p>
+              <p>采样速度：10次/秒 </p>
+              <p>传感器灵敏度范围：1.5～3mV / V</p>
+              <p>使用电源：免维护铅酸蓄电池 DC 6V/4AH；9V/300MA , DC电源</p>
+              <p>通讯接口（可选）：RS232/RS485; </p>
+              <p>波特率（可选）：1200/2400/4800/9600</p>
+              <p>使用温度：0∽40℃，储运温度：-25~55℃</p>
+              <p>湿度:≤85%RH。</p>
+              <p>功能：选配RS232/RS485端口4G,WIFI等，可连接电脑或</p>
+              <p>专用打印机，报警灯，U盘保存数据，APP,外接大屏幕和蓝牙</p>
+            </div>
           </div>
-          <div class="modular-content-same">
-            <div class="same-item">
-              <p>信息处理模块</p>
-              <div class="same-item-img">
-                <img src="../assets/img/product-group_4-icon_5.png" alt />
-              </div>
+        </div>
+      </div>
+      <div class="one module">
+        <div class="main">
+          <div class="title">边缘计算智能分析盒子</div>
+          <div class="bd" style="align-items: center;">
+            <div class="img"><img src="../assets/image/page5/1-06.png" alt=""></div>
+            <div class="text">
+              <table cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="blue border1">产品型号</td>
+                  <td class="blue">AIBOX-4</td>
+                  <td class="blue">AIBOX-16</td>
+                  <td class="blue">AIBOX-32</td>
+                  <td class="blue">AIBOX-64</td>
+                </tr>
+                <tr>
+                  <td border1>主控 CPU</td>
+                  <td>RV1126</td>
+                  <td>RK3588</td>
+                  <td>RK3568</td>
+                  <td>RK3568</td>
+                </tr>
+                <tr>
+                  <td class="blue-light border1">操作系统</td>
+                  <td class="blue-light" colspan="4">LINUX</td>
+                </tr>
+                <tr>	
+                  <td class="border1">协处理器</td>
+                  <td>Npu</td>
+                  <td>Npu</td>
+                  <td>Rv1126*8</td>
+                  <td>Rv1126*16</td>
+                </tr>		
+                <tr>
+                  <td class="blue-light border1">内存</td>
+                  <td class="blue-light">2G</td>
+                  <td class="blue-light">4G</td>
+                  <td class="blue-light">12G</td>
+                  <td class="blue-light">20G</td>
+                </tr>
+                <tr>
+                  <td class="border1">Flash</td>
+                  <td>8G</td>
+                  <td>16G</td>
+                  <td>80G</td>
+                  <td>144G</td>
+                </tr>
+                <tr>
+                  <td class="blue-light border1">算力</td>
+                  <td class="blue-light">2Tops</td>
+                  <td class="blue-light">6Tops</td>
+                  <td class="blue-light">16Tops</td>
+                  <td class="blue-light">32Tops</td>
+                </tr>
+                <tr>
+                  <td class="border1">视频接入</td>
+                  <td>4路1080P</td>
+                  <td>16路1080P</td>
+                  <td>32路1080P</td>
+                  <td>64路1080P</td>
+                </tr>
+                <tr>
+                  <td class="blue-light border1" rowspan="2">网络接口</td>
+                  <td class="blue-light">1000Mbps*1</td>
+                  <td class="blue-light" rowspan="2" colspan="3">1000Mbps*2 /4G/WIFI选配</td>
+                </tr>
+                <tr>
+                  <td class="blue-light">4G/WIFI选配</td>
+                </tr>
+                <tr>
+                  <td class="blue-light border1" rowspan="4">外部接口</td>
+                  <td>RS232*1</td>
+                  <td>RS232*1</td>
+                  <td colspan="2">RS232*1</td>
+                </tr>
+                <tr>
+                  <td>RS485*1</td>
+                  <td>RS485*1</td>
+                  <td colspan="2">RS485*1</td>
+                </tr>
+                <tr>
+                  <td>USB*4</td>
+                  <td>USB*4</td>
+                  <td colspan="2">USB*4</td>
+                </tr>
+                <tr>
+                  <td>HDMI*2</td>
+                  <td>HDMI*3</td>
+                  <td colspan="2">HDMI*1</td>
+                </tr>
+                		
+                <tr>
+                  <td class="blue-light border1">电源接口</td>
+                  <td class="blue-light">DC12V 2A</td>
+                  <td class="blue-light" colspan="3">DC 12V 5A</td>
+                </tr>
+                		
+                <tr>
+                  <td class="border1">工作温度</td>
+                  <td>-20-55℃</td>
+                  <td colspan="3">-20-70℃</td>
+                </tr>
+              </table>
             </div>
-            <div class="same-item">
-              <p>材料设备模块</p>
-              <div class="same-item-img">
-                <img src="../assets/img/product-group_4-icon_6.png" alt />
-              </div>
+          </div>
+          <div class="ft scenario">
+            <div class="name">
+              <div class="value">应用场景</div>
+              <div class="bg"></div>
             </div>
-            <div class="same-item">
-              <p>进度控制模块</p>
-              <div class="same-item-img">
-                <img src="../assets/img/product-group_4-icon_7.png" alt />
-              </div>
-            </div>
-            <div class="same-item">
-              <p>安全管理模块</p>
-              <div class="same-item-img">
-                <img src="../assets/img/product-group_4-icon_8.png" alt />
-              </div>
-            </div>
+
+            <ul>
+              <li>
+                <div class="img-box">
+                  <img src="../assets/image/page5/1-07.png" alt="">
+                  
+                </div>
+                <div class="tit">可用于工厂安全生产监管场景中，如：化工厂、 烟花爆竹厂、重点危化企业等，实时监测人员 口罩佩戴、安全帽佩戴、危险区域闯入等</div>
+              </li>
+              <li>
+                <div class="img-box">
+                  <img src="../assets/image/page5/1-08.png" alt="">
+                  
+                </div>
+                <div class="tit">可用于社区物业管理，例如小区周界防范、危险区域如供电房等是否有人员靠近等检测</div>
+              </li>
+              <li>
+                <div class="img-box">
+                  <img src="../assets/image/page5/1-09.png" alt="">
+                  
+                </div>
+                <div class="tit">应用于工业园区、物流仓库等场所的周界安全 防范、检测是否佩戴口罩等防疫场景中</div>
+              </li>
+              <li>
+                <div class="img-box">
+                  <img src="../assets/image/page5/1-10.png" alt="">
+                  
+                </div>
+                <div class="tit">适用于医疗、食品卫生、餐饮等场景的口罩佩戴识别</div>
+              </li>
+              <li>
+                <div class="img-box">
+                  <img src="../assets/image/page5/1-11.png" alt="">
+                  
+                </div>
+                <div class="tit">可用于野外监控场景，如变电站，水利设施等， 防范可疑人员靠近、危险区域闯入、人员破坏、 偷盗等</div>
+              </li>
+              <li>
+                <div class="img-box">
+                  <img src="../assets/image/page5/1-12.png" alt="">
+                  
+                </div>
+                <div class="tit">协助公共区域防疫工作的开展，实时监测区域 内人员是否佩戴口罩，并可结合语音装置发出提醒</div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -114,52 +246,13 @@ import Banner from "../components/Banner";
 export default {
   data() {
     return {
-      loading: true,
-      videoSrc: "http://www.shkjem.com/video/kj.mp4",
-      playerOptions: {
-        playbackRates: [0.5, 1.0, 1.5, 2.0, 4.0, 8.0], //可选择的播放速度
-        autoplay: false, //如果true,浏览器准备好时开始回放。
-        muted: false, // 默认情况下将会消除任何音频。
-        loop: false, // 视频一结束就重新开始。
-        preload: "auto", // 建议浏览器在<video>加载元素后是否应该开始下载视频数据。auto浏览器选择最佳行为,立即开始加载视频（如果浏览器支持）
-        language: "zh-CN",
-        aspectRatio: "16:9", // 将播放器置于流畅模式，并在计算播放器的动态大小时使用该值。值应该代表一个比例 - 用冒号分隔的两个数字（例如"16:9"或"4:3"）
-        fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。
-        sources: [
-          {
-            type: "",
-            src: "http://www.shkjem.com/video/kj.mp4" //url地址
-          }
-        ],
-        //poster: "../assets/img/home_top.jpg", //你的封面地址
-        // width: document.documentElement.clientWidth,
-        notSupportedMessage: "此视频暂无法播放，请稍后再试", //允许覆盖Video.js无法播放媒体源时显示的默认信息。
-        controlBar: {
-          timeDivider: true, //当前时间和持续时间的分隔符
-          durationDisplay: true, //显示持续时间
-          remainingTimeDisplay: false, //是否显示剩余时间功能
-          fullscreenToggle: true //全屏按钮
-        }
-      }
+      
     };
   },
   components: {
     Banner
   },
-  created() {
-    this.$http
-      .get(
-        "DataDictionary/GetDataDictionaryAll?key=%E4%BA%A7%E5%93%81%E8%A7%86%E9%A2%91%E9%93%BE%E6%8E%A5"
-      )
-      .then(response => {
-        this.videoSrc = response.data[0].Content;
-        window.console.log(this.videoSrc);
-        this.loading = false;
-      })
-      .catch(function(error) {
-        window.console.log(error);
-      });
-  }
+
 };
 </script>
 
@@ -167,118 +260,140 @@ export default {
 .product {
   width: 100%;
   height: 100%;
-  background-color: #14679f;
-}
-
-.product-content {
-  width: 1240px;
-  margin: 0 auto;
-  background-color: #fff;
-}
-
-.p-video {
-  width: 1000px;
-  margin: 0 auto;
-  padding: 60px 0;
-}
-
-//传统管理模式不足
-.lacking {
-  height: 420px;
-  padding: 20px 0;
-  //margin: 20px 0;
-
-  .lacking-bottom {
-    display: flex;
-    justify-content: space-around;
-    padding: 100px 100px;
-
-    .lacking-bottom-item {
-      width: 200px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      //justify-content: center;
-
-      .lacking-bottom-item-img {
-        width: 120px;
-        height: 120px;
-        background: #1667a0;
-        border-radius: 50%;
-        overflow: hidden;
-        line-height: 160px;
-      }
-    }
-    p {
-      font-size: 16px;
-      text-align: start;
-      margin: 10px 0;
-    }
-  }
-}
-
-//平台目标
-.target {
-  margin-top: 50px;
-  &-img {
-    margin-top: 50px;
+  background-color: #f3f3f3;
+  .banner{
+    height: 532px;
+    background: url(../assets/image/page5/banner.png) no-repeat center;
+    color: #fff;
+    font-size: 45px;
+    line-height: 465px;
     text-align: center;
   }
-}
-
-//
-.modular {
-  margin-top: 50px;
-  .modular-content {
-    padding: 50px 50px;
-    display: flex;
-    justify-content: space-around;
-  }
-}
-.modular-content-same {
-  width: 182px;
-  height: 405px;
-
-  .same-item {
-    height: 70px;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-
-    .same-item-img {
-      width: 70px;
-      height: 70px;
-      line-height: 100px;
-      background: #1667a0;
-      border-radius: 50%;
-      text-align: center;
-    }
-    p {
-      color: #1667a0;
-      font-weight: 700;
-      line-height: 70px;
+  .module{
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 40px 0 100px;
+    .main{
+      width: 1180px;
+      margin: 0 auto;
     }
   }
-}
-
-.modular-content-center {
-  width: 355px;
-  height: 355px;
-  img {
-    width: 100%;
+  .one{
+    
+    .title{
+      position: relative;
+      font-size: 32px;
+      padding-left: 40px;
+      color: #3087d6;
+      margin-bottom: 118px;
+      &::before{
+        position: absolute;
+        left: 0; 
+        top: 12px;
+        content: ' ';
+        display: block;
+        width: 20px;
+        height: 20px;
+        transform: rotate(45deg);
+        background: #3087d6;
+      }
+    }
+    .bd{
+      display: flex;
+      justify-content: space-between;
+      .img{
+        width: 585px;
+        text-align: right;
+      }
+      .text{
+        width: 480px;
+        font-size: 18px;
+        p{
+          padding-left: 6px;
+          line-height: 40px;
+          &:nth-child(2n){
+            background: #d7e7f7;
+          }
+        }
+      }
+      .blue{
+        background: #5092de;
+        color: #fff;
+      }
+      .blue-light{
+        background: #d7e7f7;
+      }
+      table{
+        text-align: center;
+        font-size: 14px;
+        border-collapse:collapse;
+        td{
+          width: 130px;
+          height: 30px;
+          border-right: 8px #fff solid;
+        }
+        td.border1{
+          border-right-width: 1px;
+        }
+      }
+    }
+    .scenario{
+      width: 1350px;
+      margin-left: -85px;
+      margin-top: 20px;
+      .name{
+        position: relative;
+        width: 82px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 57px;
+        .value{
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 3;
+          width: 82px;
+          height: 30px;
+          background: #5092dc;
+          color: #fff;
+          font-size: 16px;
+        }
+        .bg{
+          position: absolute;
+          left: 5px;
+          top: 5px;
+          z-index: 2;
+          width: 82px;
+          height: 30px;
+          background: #ffbe68;
+        }
+      }
+      ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+          width: 200px;
+          list-style: none;
+          .img-box{
+            width: 100%;
+            height: 129px;
+            img{
+              width: 100%;
+            }
+          }
+          .tit{
+            font-size: 14px;
+            color: #000;
+          }
+        }
+      }
+    }
+    
   }
 }
-//公共样式
-.title,
-.eTitle {
-  font-size: 34px;
-  font-weight: 400;
-  color: #333;
-  text-align: center;
-}
-.eTitle {
-  font-size: 30px;
-  padding: 10px 0;
-}
+
+
+
+
 </style>

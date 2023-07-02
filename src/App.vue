@@ -25,7 +25,7 @@
       <el-main>
         <router-view />
       </el-main>
-      <div class="footer" v-show="isShow">
+      <div class="footer">
         <div class="footer-content">
           <ul class="content-nav">
             <li>
