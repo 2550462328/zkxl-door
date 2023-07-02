@@ -15,9 +15,9 @@
           <el-menu-item index="/">首页</el-menu-item>
           <el-menu-item index="/goin">走进星联</el-menu-item>
           <el-menu-item index="/news">新闻中心</el-menu-item>
-          <el-menu-item index="/news">解决方案</el-menu-item>
+          <el-menu-item index="/solution">解决方案</el-menu-item>
           <el-menu-item index="/product">产品中心</el-menu-item>
-          <el-menu-item index="/product">加入我们</el-menu-item>
+          <!-- <el-menu-item index="/product">加入我们</el-menu-item> -->
           <el-menu-item index="/online-experience">在线体验</el-menu-item>
           <el-menu-item index="/contact">联络星联</el-menu-item>
         </el-menu>
