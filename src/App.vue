@@ -3,7 +3,7 @@
     <el-container>
       <el-header>
         <div class="logo">
-          <img src="./assets/img/toplogo.png" alt />
+          <img src="./assets/image/logo.jpg" alt />
         </div>
         <el-menu
           :default-active="defaultActive"
@@ -69,7 +69,7 @@
               <span>厂址: 淮南市山南新区高新区双创中心二期厂房</span>
             </li>
           </ul>
-          <img src="./assets/img/ercode.png" alt />
+          <img src="./assets/image/qr.jpg" alt />
         </div>
         <div class="copyright">
           <span>星联版权所有</span>
