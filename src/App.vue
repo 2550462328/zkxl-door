@@ -29,11 +29,11 @@
         <div class="footer-content">
           <ul class="content-nav">
             <li>
-              <p>走进科建</p>
-              <span>发展历程</span>
-              <span>企业文化</span>
+              <p>走进星联</p>
+              <span>公司简介</span>
               <span>资质荣誉</span>
-              <span>合作伙伴</span>
+              <span>企业案例</span>
+              <span>团队风采</span>
             </li>
             <li>
               <p>新闻资讯</p>
@@ -41,23 +41,38 @@
               <span>行业动态</span>
             </li>
             <li>
-              <p>产品中心</p>
-              <span>介绍视频</span>
-              <span>管理模式</span>
-              <span>平台目标</span>
-              <span>功能模块</span>
+              <p>服务提供</p>
+              <span>卫生健康</span>
+              <span>生态环境</span>
+              <span>智能化升级</span>
             </li>
             <li>
-              <p>联系我们</p>
-              <span>邮箱：kejianlml@163.com</span>
-              <span>电话：021-55802368</span>
-              <span>地址：上海市杨浦区翔殷路128号12号楼101</span>
+              <p>产品中心</p>
+              <span>医废称</span>
+              <span>医废小秤</span>
+              <span>危废柜</span>
+              <span>危废秤</span>
+              <span>AI盒子</span>
+            </li>
+            <li>
+              <p>加入我们</p>
+              <span>人才发展</span>
+              <span>员工风采</span>
+            </li>
+            <li>
+              <p>在线体验</p>
+            </li>
+            <li>
+              <p>联系星联</p>
+              <span>总部: 合肥市广西路中国科学技术大学国际金融研究院四号楼</span>
+              <span>市内服务中心：合肥市稻香路9号周山科技创业中心五楼</span>
+              <span>厂址: 淮南市山南新区高新区双创中心二期厂房</span>
             </li>
           </ul>
           <img src="./assets/img/ercode.png" alt />
         </div>
         <div class="copyright">
-          <span>科建版权所有</span>
+          <span>星联版权所有</span>
         </div>
       </div>
     </el-container>
@@ -122,13 +137,14 @@ body {
 
 .footer {
   width: 100%;
-  height: 216px;
+  height: 240px;
   overflow: hidden;
   background-color: #14679f;
   &-content {
-    width: 1240px;
+    width: 1580px;
     margin: 0 auto;
     padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
     .content-nav {

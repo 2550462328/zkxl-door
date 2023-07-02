@@ -12,9 +12,8 @@
           <p>UNION STARS</p>
         </div>
         <div class="slogan">
-          <p>高质量服务</p>
-          <p>高技术创新</p>
-          <p>高速度发展</p>
+          <p class="mb20">致力于环境安全与健康</p>
+          <p>让人们生活更美好</p>
         </div>
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-two">
@@ -194,9 +193,9 @@ export default {
   }
 
   .slogan {
-    outline: 1px solid #fff;
+    // outline: 1px solid #fff;
     display: flex;
-    width: 190px;
+    width: 300px;
     margin: 0px auto;
     flex-direction: column;
     align-items: center;
@@ -210,6 +209,9 @@ export default {
     text-shadow:2px 2px #000;
     p {
       margin-bottom: 10px;
+    }
+    .mb20{
+      margin-bottom: 30px;
     }
   }
 }

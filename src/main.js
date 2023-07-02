@@ -46,7 +46,8 @@ axios.defaults.baseURL = '/backend/api/'
 Vue.prototype.$http = axios
 
 // 图片服务器地址
-Vue.prototype.imgserver = '/backend/'
+// Vue.prototype.imgserver = '/backend/'
+Vue.prototype.imgserver = ''
 
 new Vue({
   router,

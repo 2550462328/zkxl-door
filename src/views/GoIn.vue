@@ -1,117 +1,86 @@
 <template>
   <div class="go-in">
-    <banner img="../assets/img/bgtop.jpg" title="走进科建" />
+    <div class="banner">
+      <img src="../assets/image/page2/banner.png" alt="">
+    </div>
     <div class="section" v-loading="loading">
       <div class="section-content">
-        <div class="content-summary">
-          <div class="summary-left">
+        <div class="content-summary module">
+          <div class="hd">
             <p class="title">公司简介</p>
-            <p class="eTitle">ABOUT US</p>
-            <p class="content">
-              上海科建工程管理股份有限公司成立于2012年9月，注册资金500万。公司前身上海科建工程管理有限公司，
-              是一家从事专业工程技术服务及工程项目管理的企业。公司于2017年11月通过国家高新技术企业认定，
-              目前工程管理软件研发团队10人，包括硕士和研究生在内，平均年龄在35岁。公司自主研发工程项目管理
-              标准化+互联网协同工作系统平台，此软件广泛应用于工程项目管理过程，实现全覆盖检查、全过程控制、全方位协调的目标。
-              目前公司业务范围涉及上海、广东等多地，合作的单位有上海同济工程项目管理咨询有限公司、
-              上海华银日用品有限公司、中科建设开发总公司、广东怡轩房地产开发有限公司等多家知名企业。 立人立己、达人达己！公司一直秉承“
-              帮助施工单位解决技术问题、帮助业主解决协调问题 ”的管理理念，上海科建工程管理股份有限公司不断在工程项目管理领域开拓创新，
-              通过不断完善工程项目管理标准化+互联网协同工作系统平台，实现每项工程“无重大安全事故、无重大返工、工程施工材料无伪劣产品、
-              工程管理留下痕迹、施工过程可追溯”五大管理目标。
-            </p>
+            <p class="eTitle">COMPANY PROFILE</p>
           </div>
-          <div class="summary-right">
-            <img src="../assets/img/jianjietopmin.jpg" alt />
+          <div class="bd">
+            <div class="summary-left">
+              <div class="mb20">
+                <a href="">公司概况 <span>>>></span></a>
+                <p class="content">
+                  中科星联技术有限公司——“中科星联”是顺应国家十四五战略规划，在加强科技创新建设的环境下，致力于应对健康与环境安全的一家高新技术企业。中科星联创建于创新与务实并蓄的科技名城——安徽合肥，落户在中国科学技术大学国际金融研究院科创中心平台上，是中心孵化的第一家实战型科技企业。
+                </p>
+              </div>
+              <div class="mb20">
+                <a href="">公司实力 <span>>>></span></a>
+                <p class="content">实干开新局，蓄势求突破。“中科星联”陆续推出水质在线监测系统、职业病监督执法综合管理系统、病媒生物密度监测系统等，为医疗机构、工业产废单位、卫生健康委、生态环境部门提供全闭环的数据解决方案及数据处理服务。中科星联将会一如继往，当好守护人民健康环境的勤务兵。</p>
+              </div>
+              <div>
+                <a href="">中科星联在行动 <span>>>></span></a>
+                <p class="content">中科星联以国际名校中国科学技术大学和上海交通大学人才为辐射源头，依托安徽理工大学重点实验室为载体，将智慧健康、智慧环保作为主要研发方向，致力于现代通信技术、移动物联、大数据技术的深挖与应用。首期推出的医废溯源管理系统、危废智控系统，基于智慧物联网技术，已广泛应用于卫生健康及生态环保领域。</p>
+              </div>
+            </div>
+            <div class="summary-right">
+              <img src="../assets/image/page2/1-02.png" alt />
+            </div>
           </div>
-        </div>
-        <el-divider class="el-divider-active">
-          <i class="el-icon-arrow-down el-icon-arrow-down-active"></i>
-        </el-divider>
-        <!-- 发展历程 -->
-        <div class="content-course">
-          <div class="top">
-            <h3>发展历程</h3>
-            <p>DEVELOPMENT</p>
-            <div class="border"></div>
-            <div class="timeline"></div>
-          </div>
-          <div class="course-time">
-            <swiper :options="swiperOption" ref="mySwiper">
-              <swiper-slide v-for="(item,index) in courseList" :key="index">
-                <div class="time-show">
-                  <div class="time-show-item" v-for="(courseOne,one) in item" :key="one">
-                    <div class="item-top" :class="{'order-top' : one%2===1}"></div>
-                    <el-divider>
-                      <i class="el-icon-mobile-phone"></i>
-                    </el-divider>
-                    <div class="item-bottom" :class="{'order' : one%2===1}">
-                      <div class="item-bottom-content">
-                        <p>{{courseOne.Content}}</p>
-                        <p>{{courseOne.Year}}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </swiper-slide>
-              <div class="swiper-button-prev" slot="button-prev"></div>
-              <div class="swiper-button-next" slot="button-next"></div>
-            </swiper>
-          </div>
-        </div>
-
-        <div class="content-culture">
-          <h3>企业文化</h3>
-          <h3>CULTURE</h3>
-          <p>我们只专注一件事情——工程项目管理</p>
-          <span>确保工程无重大安全事故</span>
-          <span>确保工程施工单位无大面积返工</span>
-          <span>确保工程材料及设备无伪劣产品</span>
-          <span>确保工程管理留下痕迹、实施过程可追溯</span>
+          
         </div>
         <!-- 公司荣誉 -->
-        <div class="content-honor">
+        <div class="content-honor module">
           <div class="honor-big-img">
             <el-dialog :title="dialogTitle" :visible.sync="dialogTableVisible">
               <img v-lazy="dialogUrl" alt />
             </el-dialog>
           </div>
-          <div class="top">
-            <h3>公司荣誉</h3>
-            <p>HONOR</p>
-            <div class="border"></div>
+          <div class="hd">
+            <p class="title">资质荣誉</p>
+            <p class="eTitle">QUALIFICATIONS AND HONORS</p>
           </div>
           <ul class="honor-show">
-            <li v-for="(honor,index) in honorList" :key="index">
-              <img
-                v-lazy="imgserver+honor.Img"
-                @click="dialogTableVisible = true ;dialogUrl = imgserver + honor.Img;dialogTitle= honor.Remark"
-              />
-            </li>
-          </ul>
-          <p>点击图片查看大图</p>
+              <li v-for="(honor,index) in honorList" :key="index">
+                <img
+                  v-lazy="honor.Img"
+                  @click="dialogTableVisible = true ;dialogUrl = honor.Img;dialogTitle= honor.Remark"
+                />
+              </li>
+            </ul>
+            <ul class="honor-show honor-show2">
+              <li v-for="(honor,index) in honorList2" :key="index">
+                <img
+                  v-lazy="honor.Img"
+                  @click="dialogTableVisible = true ;dialogUrl = honor.Img;dialogTitle= honor.Remark"
+                />
+              </li>
+            </ul>
+        </div>
+        <div class="content-case module">
+          <div class="hd">
+            <p class="title">企业案例</p>
+            <p class="eTitle">ENTERPRISE CASE</p>
+          </div>
+          <div class="bd">
+            <img src="../assets/image/page2/1-17.png" alt="">
+          </div>
         </div>
         <!-- 团队风采 -->
-        <div class="content-team">
-          <div class="top">
-            <h3>团队风采</h3>
-            <p>TEAM</p>
+        <div class="content-team module">
+          <div class="hd">
+            <p class="title">团队风采</p>
+            <p class="eTitle">TEAM</p>
           </div>
           <el-carousel :interval="4000" type="card">
             <el-carousel-item v-for="(team,index) in teamItem" :key="index">
-              <div class="swiper-img" v-lazy:background-image="imgserver + team.Img"></div>
+              <div class="swiper-img" v-lazy:background-image="team.Img"></div>
             </el-carousel-item>
           </el-carousel>
-        </div>
-        <!-- 合作伙伴 -->
-        <div class="content-partner">
-          <div class="top">
-            <h3>合作伙伴</h3>
-            <p>RARTNERS</p>
-            <ul class="partner-img">
-              <li v-for="(partner,i) in partnerImg" :key="i">
-                <img v-lazy="imgserver+partner.Img" alt />
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -121,6 +90,21 @@
 <script>
 import Banner from "../components/Banner";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
+let honor1 = require('../assets/image/page2/1-03.png')
+let honor2 = require('../assets/image/page2/1-04.png')
+let honor3 = require('../assets/image/page2/1-05.png')
+let honor4 = require('../assets/image/page2/1-06.png')
+let honor5 = require('../assets/image/page2/1-07.png')
+let honor6 = require('../assets/image/page2/1-08.png')
+
+let honor7 = require('../assets/image/page2/1-09.png')
+let honor8 = require('../assets/image/page2/1-10.png')
+let honor9 = require('../assets/image/page2/1-11.png')
+let honor10 = require('../assets/image/page2/1-12.png')
+let honor11 = require('../assets/image/page2/1-13.png')
+let honor12 = require('../assets/image/page2/1-14.png')
+let honor13 = require('../assets/image/page2/1-15.png')
+let honor14 = require('../assets/image/page2/1-16.png')
 export default {
   components: {
     Banner,
@@ -130,10 +114,71 @@ export default {
   data() {
     return {
       loading: true,
-      honorList: [],
+      honorList: [
+        {
+          Img: honor1,
+        },
+        {
+          Img: honor2,
+        },
+        {
+          Img: honor3,
+        },
+        {
+          Img: honor4,
+        },
+        {
+          Img: honor5,
+        },
+        {
+          Img: honor6,
+        },
+      ],
+      honorList2: [
+        {
+          Img: honor7,
+        },
+        {
+          Img: honor8,
+        },
+        {
+          Img: honor9,
+        },
+        {
+          Img: honor10,
+        },
+        {
+          Img: honor11,
+        },
+        {
+          Img: honor12,
+        },
+        {
+          Img: honor13,
+        },
+        {
+          Img: honor14,
+        },
+      ],
       partnerImg: [],
       courseList: [],
-      teamItem: [],
+      teamItem: [
+        {
+          Img: 'http://shkjgw.shkjem.com//imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
+        },
+        {
+          Img: 'http://shkjgw.shkjem.com//imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
+        },
+        {
+          Img: 'http://shkjgw.shkjem.com//imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
+        },
+        {
+          Img: 'http://shkjgw.shkjem.com//imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
+        },
+        {
+          Img: 'http://shkjgw.shkjem.com//imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
+        },
+      ],
       swiperOption: {
         navigation: {
           nextEl: ".swiper-button-next",
@@ -146,6 +191,7 @@ export default {
     };
   },
   mounted() {
+    this.loading = false;
     this.$http
       .all([
         this.$http.get("Honor/GetHonorAll"),
@@ -156,7 +202,6 @@ export default {
       .then(
         this.$http.spread(
           (responseHonor, responseEnterprise, responseTeam, responseCourse) => {
-            this.honorList = responseHonor.data;
             this.partnerImg = responseEnterprise.data;
             this.teamItem = responseTeam.data;
 
@@ -185,13 +230,35 @@ export default {
   margin: 0;
   padding: 0;
 }
+.mb20{
+  margin-bottom: 20px;
+}
 
 .go-in {
   width: 100%;
   height: 100%;
-  background-color: #14679f;
   position: relative;
   overflow: hidden;
+  .banner{
+    img{
+      width: 100%;
+    }
+  }
+  .module{
+    .hd{
+      text-align: center;
+      padding-top: 44px;
+      padding-bottom: 40px;
+      .title{
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .eTitle{
+        font-size: 12px;
+        color: #ccc;
+      }
+    }
+  }
   .section {
     width: 100%;
     &-content {
@@ -200,10 +267,15 @@ export default {
       background-color: #fff;
 
       .content-summary {
+        width: 1448px;
+        margin-left: -104px;
+        .bd{
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          align-items: center;
+        }
         //height: 500px;
-        display: flex;
-        justify-content: space-around;
-        padding: 100px 0;
         .summary-left {
           width: 600px;
           .title {
@@ -215,27 +287,33 @@ export default {
             color: #e13834;
             padding: 20px 0;
           }
+          a{
+            display: block;
+            font-size: 24px;
+            color:#1667a0;
+            cursor: pointer;
+            text-decoration: none;
+            margin-bottom: 10px;
+            span{
+              color:#333;
+            }
+          }
           .content {
-            color: #14679f;
-            font-size: 14px;
+            color: #000;
+            font-size: 16px;
             text-indent: 25px;
             line-height: 30px;
+            text-align:justify;
           }
         }
 
         .summary-right {
-          width: 400px;
-          height: 310px;
-          border: 2px solid #1d42b9;
-          //animation: imgboxkey 4s infinite;
+          width: 717px;
           border-radius: 10px;
-          margin-top: 80px;
           text-align: center;
 
           img {
-            width: 360px;
-            height: 270px;
-            margin-top: 20px;
+            width: 100%;
             //animation: imgbo 4s infinite;
           }
         }
@@ -313,31 +391,104 @@ export default {
 
       //公司荣誉
       .content-honor {
-        padding: 50px 0;
+        padding: 50px 0 10px;
         .honor-show {
-          width: 1000px;
-          margin: 30px auto;
+          width: 1100px;
+          height: 245px;
+          margin: 0px auto 30px;
+          
           display: flex;
           flex-wrap: wrap;
           justify-content: flex-start;
           align-content: flex-start;
-
+          position: relative;
           li {
+            cursor: pointer;
+            position: absolute;
+            top:0;
+            
             width: 220px;
-            height: 320px;
-            margin-left: 15px;
+            height: 245px;
             list-style: none;
-            border: 1px solid palegoldenrod;
 
             img {
               width: 100%;
               height: 100%;
             }
           }
+          li:nth-child(1){
+            left:0;
+          }
+          li:nth-child(2){
+            left:110px;
+          }
+          li:nth-child(3){
+            width: 346px;
+            left:220px;
+          }
+          li:nth-child(4){
+            width: 346px;
+            z-index: 9;
+            right:220px;
+          }
+          li:nth-child(5){
+            z-index: 8;
+            right:110px;
+          }
+          li:nth-child(6){
+            z-index: 7;
+            right:0;
+          }
+        }
+        .honor-show2{
+            height: 350px;
+          li{
+            width: 254px;
+            height: 357px;
+          }
+          li:nth-child(1){
+            left:0;
+          }
+          li:nth-child(2){
+            left:110px;
+          }
+          li:nth-child(3){
+            width: 220px;
+            left:220px;
+          }
+          li:nth-child(4){
+            width: 220px;
+            z-index: 9;
+            left:330px;
+          }
+          li:nth-child(5){
+            width: 220px;
+            z-index: 8;
+            right:330px;
+          }
+          li:nth-child(6){
+            width: 220px;
+            z-index: 7;
+            right:220px;
+          }
+          li:nth-child(7){
+            z-index: 6;
+            right:110px;
+          }
+          li:nth-child(8){
+            z-index: 6;
+            right:0;
+          }
         }
         p {
           text-align: center;
           color: #3c6088;
+        }
+      }
+      .content-case{
+        margin-bottom: 10px;
+        .bd{
+          display: inline-block;
         }
       }
 
@@ -457,11 +608,9 @@ export default {
 }
 .honor-big-img {
   width: 100%;
-  height: 100%;
+  padding: 0;
   z-index: 10;
   text-align: center;
-  padding-bottom: 20px;
-  padding: 5%;
   //background-color: #14679f;
   .el-dialog__wrapper {
     position: fixed;
