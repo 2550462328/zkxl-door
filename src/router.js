@@ -10,6 +10,16 @@ let kejianrouter = new Router({
       component: () => import('./views/Home.vue')
     },
     {
+      path: '/online-experience',
+      name: 'experience',
+      component: () => import('./views/OnlineExperience.vue'),
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('./views/Contact.vue'),
+    },
+    {
       path: '/news',
       name: 'news',
       component: () => import('./views/News.vue'),
@@ -38,11 +48,6 @@ let kejianrouter = new Router({
       path: '/goin',
       name: 'goin',
       component: () => import('./views/GoIn.vue')
-    },
-    {
-      path: '/download',
-      name: 'download',
-      component: () => import('./views/Download.vue')
     },
     {
       path: '/login',
