@@ -164,19 +164,19 @@ export default {
       courseList: [],
       teamItem: [
         {
-          Img: 'http://shkjgw.shkjem.com//imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
+          Img: '/backend/imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
         },
         {
-          Img: 'http://shkjgw.shkjem.com//imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
+          Img: '/backend/imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
         },
         {
-          Img: 'http://shkjgw.shkjem.com//imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
+          Img: '/backend/imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
         },
         {
-          Img: 'http://shkjgw.shkjem.com//imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
+          Img: '/backend/imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
         },
         {
-          Img: 'http://shkjgw.shkjem.com//imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
+          Img: '/backend/imagestore/2019/0426/f929d681-38c3-4d4f-b845-fa695f4801e8.jpg'
         },
       ],
       swiperOption: {
