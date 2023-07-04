@@ -7,10 +7,6 @@
       ref="mySwiper"
     >
       <swiper-slide class="swiper-slide slide-one">
-        <div class="page">
-          <h3>中科星联</h3>
-          <p>UNION STARS</p>
-        </div>
         <div class="slogan">
           <p class="mb20">致力于环境安全与健康</p>
           <p>让人们生活更美好</p>
@@ -194,17 +190,18 @@ export default {
 
   .slogan {
     // outline: 1px solid #fff;
+    
     display: flex;
-    width: 300px;
+    width: 400px;
     margin: 0px auto;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     vertical-align: middle;
-    font-size: 30px;
+    font-size: 40px;
     color: #fff;
     padding: 20px 20px 10px 20px;
-    font-weight: 200;
+    padding-top: 310px;
     color: #fff;
     text-shadow:2px 2px #000;
     p {
