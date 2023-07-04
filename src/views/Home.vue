@@ -199,6 +199,7 @@ export default {
     justify-content: space-around;
     vertical-align: middle;
     font-size: 40px;
+    font-weight: 200;
     color: #fff;
     padding: 20px 20px 10px 20px;
     padding-top: 310px;
