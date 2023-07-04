@@ -58,31 +58,31 @@ export default {
         {
           Id: '',
           "Title":"国务院安委会办公室关于2018年上半年全国建筑业安全生产形势的通报",
-          "Img":"http://shkjgw.shkjem.com//imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
+          "Img":"/backend/imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
           "Content": '法兰克福记录打发士大夫发的法大师傅顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶答复1打法'
         },
         {
           Id: '',
           "Title":"国务院安委会办公室关于2018年上半年全国建筑业安全生产形势的通报",
-          "Img":"http://shkjgw.shkjem.com//imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
+          "Img":"/backend/imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
           "Content": '法兰克福记录打发士大夫发的法大师傅顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶答复1打法'
         },
         {
           Id: '',
           "Title":"国务院安委会办公室关于2018年上半年全国建筑业安全生产形势的通报",
-          "Img":"http://shkjgw.shkjem.com//imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
+          "Img":"/backend/imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
           "Content": '法兰克福记录打发士大夫发的法大师傅顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶答复1打法'
         },
         {
           Id: '',
           "Title":"国务院安委会办公室关于2018年上半年全国建筑业安全生产形势的通报",
-          "Img":"http://shkjgw.shkjem.com//imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
+          "Img":"/backend/imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
           "Content": '法兰克福记录打发士大夫发的法大师傅顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶答复1打法'
         },
         {
           Id: '',
           "Title":"国务院安委会办公室关于2018年上半年全国建筑业安全生产形势的通报",
-          "Img":"http://shkjgw.shkjem.com//imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
+          "Img":"/backend/imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
           "Content": '法兰克福记录打发士大夫发的法大师傅顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶答复1打法'
         },
        ],
@@ -91,13 +91,13 @@ export default {
       {
           Id: '',
           "Title":"国务院安委会办公室关于2018年上半年全国建筑业安全生产形势的通报",
-          "Img":"http://shkjgw.shkjem.com//imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
+          "Img":"/backend/imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
           "Content": '法兰克福记录打发士大夫发的法大师傅顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶答复1打法'
         },
         {
           Id: '',
           "Title":"国务院安委会办公室关于2018年上半年全国建筑业安全生产形势的通报",
-          "Img":"http://shkjgw.shkjem.com//imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
+          "Img":"/backend/imagestore/2018/0808/ef5a8f93-96ba-4e30-a772-b38223235c62.jpg",
           "Content": '法兰克福记录打发士大夫发的法大师傅顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶答复1打法'
         },
       ],
