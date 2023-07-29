@@ -7,9 +7,8 @@
       ref="mySwiper"
     >
       <swiper-slide class="swiper-slide slide-one">
-        <div class="slogan">
-          <p class="mb20">致力于环境安全与健康</p>
-          <p>让人们生活更美好</p>
+        <div class="video">
+          <img src="../assets/image/page1/xc.gif" alt="">
         </div>
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-two">
@@ -23,7 +22,8 @@
             :key="index"
             v-lazy:background-image="item.src"
           >
-            <router-link
+          <div class="des">{{ item.title }}</div>
+            <!-- <router-link
               class="text-decoration"
               :to="{ name: 'casedetails', params: { id: item.Id } }"
             >
@@ -34,7 +34,7 @@
                   <span>MORE</span>
                 </div>
               </div>
-            </router-link>
+            </router-link> -->
           </li>
         </ul>
       </swiper-slide>
@@ -49,6 +49,22 @@
               <img :src="news.src" alt="">
               <div class="news-content-item-title">{{ news.title }}</div>
               <div class="link">Read More</div>
+            </div>
+            <div class="news-content-item">
+              <div class="news-content-item-info">
+                <p>电话：0551-63468772</p>
+                <p>邮箱：zk-stars@139.com</p>
+                <p>地址：中国科学技术大学国际金融院四号楼</p>
+              </div>
+              <div class="news-content-item-flex">
+                <div class="news-content-item-flex-box">
+                  <img class="er" src="../assets/image/page1/er.png" alt="">
+                </div>
+                <div class="news-content-item-flex-box">
+                  <p style="padding-top: 24px;">关注公众号</p>
+                  <p>了解更多详情</p>
+                </div>
+              </div>
             </div>
           </div>         
         </div>
@@ -72,17 +88,21 @@ export default {
       loading: true,
       caseList: [
         {
-          'src': require('../assets/image/solution1.png'),
-          'title': "",
+          'src': require('../assets/image/page1/1-03.jpg'),
+          'title': "信息系统集成",
         },
         {
-          'src': require('../assets/image/solution2.png'),
-          'title': "",
+          'src': require('../assets/image/page1/1-04.jpg'),
+          'title': "电子与智能化工程",
         },
         {
-          'src': require('../assets/image/solution3.png'),
-          'title': "",
-        }
+          'src': require('../assets/image/page1/1-05.jpg'),
+          'title': "环境工程及综合运维",
+        },
+        {
+          'src': require('../assets/image/page1/1-06.jpg'),
+          'title': "绿色循环",
+        },
       ],
       newsList: [
         {
@@ -177,13 +197,13 @@ export default {
     h3 {
       font-size: 35px;
       font-weight: 200;
-      color: #fff;
+      color: #23649a;
       margin-bottom: 5px;
     }
     p {
       font-size: 20px;
       font-weight: 200;
-      color: #fff;
+      color: #23649a;
       box-sizing: border-box;
     }
   }
@@ -215,7 +235,7 @@ export default {
 }
 //经典案例
 .case-item {
-  width: 1100px;
+  width: 1733px;
   height: 500px;
   overflow: hidden;
   margin: 0 auto;
@@ -224,8 +244,8 @@ export default {
   flex-wrap: wrap;
   justify-content: flex-start;
   li {
-    width: 330px;
-    height: 250px;
+    width: 406px;
+    height: 265px;
     list-style: none;
     background-repeat: no-repeat;
     background-size: cover;
@@ -234,7 +254,17 @@ export default {
     margin: 5px;
     position: relative;
     overflow: hidden;
-
+    text-align: center;
+    .des{
+      margin-top: 105px;
+      display: inline-block;
+      height: 54px;
+      line-height: 54px;
+      padding: 0 32px;
+      background: #256499;
+      font-size: 32px;
+      color: #fff;
+    }
     &:hover {
       .case-item-hover {
         opacity: 1;
@@ -292,11 +322,11 @@ export default {
   background-size: cover;
 }
 .slide-two {
-  background: url(../assets/image/bg2.jpg) no-repeat center;
+  background: url(../assets/image/page1/bg2.jpg) no-repeat center;
   background-size: cover;
 }
 .slide-three {
-  background: url(../assets/image/bg3.jpg) no-repeat center;
+  background: url(../assets/image/page1/bg3.jpg) no-repeat center;
   background-size: cover;
   .page {
     margin-top: 50px;
@@ -304,30 +334,58 @@ export default {
 }
 //最新资讯
 .news-content {
-  width: 1200px;
+  width: 1036px;
   margin: 0 auto;
   margin-top: 20px;
   
   .news-content-box{
-    margin-left: -26px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .news-content-item-flex{
+    display: flex;
+    justify-content: space-between;
+  }
+  .news-content-item-flex-box{
+    width: 110px;
+    height: 110px;
+    border: 1px #acacac solid;
+    font-size: 12px;
+    color: #909090;
+    text-align: center;
+    line-height: 30px;
+    .er{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .news-content-item-info{
+    color: #333;
+    font-size: 12px;
+    border-left: 2px #a8a8a8 solid;
+    padding-left: 4px;
+    margin-bottom: 10px;;
   }
   .news-content-item{
-    width: 380px;
-    height: 310px;
-    margin-bottom: 24px;
-    margin-left: 26px;
+    width: 290px;
+    height: 230px;
+    margin-bottom: 80px;
     background: #fff;
-    border: 1px #797882 solid;
+    border: 1px #c6c6c8 solid;
     box-sizing: border-box;
-    padding: 26px 30px;
+    padding: 26px 26px;
+    img{
+      height: 60px;
+    }
     .news-content-item-title{
       margin-top: 10px;
+      font-size: 18px;
     }
     .link{
+      font-size: 12px;
       display: inline-block;
-      margin-top: 65px;
+      margin-top: 50px;
       color: #4d81ad;
       border-bottom: 2px #4d81ad solid;
       cursor: pointer;
@@ -340,5 +398,13 @@ export default {
 }
 .order-img {
   order: 1;
+}
+.video{
+  width: 100%;
+  height: 100%;
+  img{
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>
