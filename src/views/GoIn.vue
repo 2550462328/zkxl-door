@@ -1,7 +1,7 @@
 <template>
   <div class="go-in">
     <div class="banner">
-      <img src="../assets/image/page2/banner.png" alt="">
+      <img src="../assets/image/page2/banner.jpg" alt="">
     </div>
     <div class="section" v-loading="loading">
       <div class="section-content">
@@ -11,23 +11,43 @@
             <p class="eTitle">COMPANY PROFILE</p>
           </div>
           <div class="bd">
-            <div class="summary-left">
-              <div class="mb20">
-                <a href="">公司概况 <span>>>></span></a>
+            <div class="summary-t">
+              <div class="card">
+                <div class="tit">公司概况</div>
                 <p class="content">
                   中科星联技术有限公司——“中科星联”是顺应国家十四五战略规划，在加强科技创新建设的环境下，致力于应对健康与环境安全的一家高新技术企业。中科星联创建于创新与务实并蓄的科技名城——安徽合肥，落户在中国科学技术大学国际金融研究院科创中心平台上，是中心孵化的第一家实战型科技企业。
                 </p>
               </div>
-              <div class="mb20">
-                <a href="">公司实力 <span>>>></span></a>
-                <p class="content">实干开新局，蓄势求突破。“中科星联”陆续推出水质在线监测系统、职业病监督执法综合管理系统、病媒生物密度监测系统等，为医疗机构、工业产废单位、卫生健康委、生态环境部门提供全闭环的数据解决方案及数据处理服务。中科星联将会一如继往，当好守护人民健康环境的勤务兵。</p>
-              </div>
-              <div>
-                <a href="">中科星联在行动 <span>>>></span></a>
+              <div class="card">
+                <div class="tit">公司实力</div>
                 <p class="content">中科星联以国际名校中国科学技术大学和上海交通大学人才为辐射源头，依托安徽理工大学重点实验室为载体，将智慧健康、智慧环保作为主要研发方向，致力于现代通信技术、移动物联、大数据技术的深挖与应用。首期推出的医废溯源管理系统、危废智控系统，基于智慧物联网技术，已广泛应用于卫生健康及生态环保领域。</p>
+
+              </div>
+              <div class="card">
+                <div class="tit">中科星联在行动</div>
+                <p class="content">实干开新局，蓄势求突破。“中科星联”陆续推出水质在线监测系统、职业病监督执法综合管理系统、病媒生物密度监测系统等，为医疗机构、工业产废单位、卫生健康委、生态环境部门提供全闭环的数据解决方案及数据处理服务。中科星联将会一如继往，当好守护人民健康环境的勤务兵。</p>
+
               </div>
             </div>
-            <div class="summary-right">
+            <div class="summary-m">
+              <div class="point">
+                <i>2</i>
+                <span>大研发方向</span>
+              </div>
+              <div class="point">
+                <i>5</i>
+                <span>大科技项目</span>
+              </div>
+              <div class="point">
+                <i>1</i>
+                <span>大硬件研发中心</span>
+              </div>
+              <div class="point">
+                <i>2</i>
+                <span>大软件研发中心</span>
+              </div>
+            </div>
+            <div class="summary-b">
               <img src="../assets/image/page2/1-02.png" alt />
             </div>
           </div>
@@ -267,56 +287,76 @@ export default {
       background-color: #fff;
 
       .content-summary {
-        width: 1448px;
-        margin-left: -104px;
+        
         .bd{
-          display: flex;
-          justify-content: space-around;
-          flex-wrap: wrap;
-          align-items: center;
-        }
-        //height: 500px;
-        .summary-left {
-          width: 600px;
-          .title {
-            font-size: 25px;
-            color: #e13834;
-          }
-          .eTitle {
-            font-size: 17px;
-            color: #e13834;
-            padding: 20px 0;
-          }
-          a{
-            display: block;
-            font-size: 24px;
-            color:#1667a0;
-            cursor: pointer;
-            text-decoration: none;
-            margin-bottom: 10px;
-            span{
-              color:#333;
+          .summary-t {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            .card{
+              width: 380px;
+              height: 284px;
+              
+              box-sizing: border-box;
+              border: 1px #5b8bb3 solid;
+              padding: 30px;
+              line-height: 26px;
+              text-align: justify;
+              .tit{
+                width: 170px;
+                height: 42px;
+                margin: 0 auto;
+                line-height: 42px;
+                text-align: center;
+                border-radius: 20px;
+                background: #fff;
+                border: 1px #5b8bb3 solid;
+                color: #004096;
+                font-size: 20px;
+                margin-top: -52px;
+              }
+              .content{
+                padding-top: 20px;
+              }
+
+
             }
           }
-          .content {
-            color: #000;
-            font-size: 16px;
-            text-indent: 25px;
-            line-height: 30px;
-            text-align:justify;
+          .summary-m{
+            display: flex;
+            justify-content: space-around;
+            margin: 100px 0 120px;
+            .point{
+              width: 180px;
+              height: 180px;
+              box-sizing: border-box;
+              padding-top: 40px;
+              background: #004097;
+              border-radius: 50%;
+              color: #fff;
+              text-align: center;
+              i{
+                display: block;
+                font-style: normal;
+                font-size: 44px;
+                font-weight: bold;
+                margin-bottom: 12px;
+              }
+              span{
+                display: block;
+                font-size: 20px;
+              }
+            }
+          }
+          .summary-b {
+            text-align: center;
+            img{
+              width: 1208px;
+            }
           }
         }
 
-        .summary-right {
-          width: 717px;
-          border-radius: 10px;
-          text-align: center;
-
-          img {
-            width: 100%;
-            //animation: imgbo 4s infinite;
-          }
-        }
+        
       }
 
       //发展历程

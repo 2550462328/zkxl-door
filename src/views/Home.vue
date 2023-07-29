@@ -317,10 +317,7 @@ export default {
 // .swiper-slide:nth-child(2n-1) {
 //   background: seashell;
 // }
-.slide-one {
-  background: url(../assets/image/bg1.png) no-repeat center;
-  background-size: cover;
-}
+
 .slide-two {
   background: url(../assets/image/page1/bg2.jpg) no-repeat center;
   background-size: cover;
