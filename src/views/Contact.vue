@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     goMap(){
-      window.open('https://map.baidu.com/poi/%E5%AE%89%E5%BE%BD%E4%B8%AD%E7%A7%91%E6%98%9F%E8%81%94%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@13039132.328414269,3718731.3996959305,14.91z?uid=b0142f64c492524ff03cbae7&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&querytype=detailConInfo&da_src=shareurl')
+      window.open('https://map.baidu.com/search/%E4%B8%AD%E5%9B%BD%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E5%9B%BD%E9%99%85%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%E9%99%A2/@13057358.438977566,3704769.91183955,15.59z?querytype=s&da_src=shareurl&wd=%E4%B8%AD%E5%9B%BD%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E5%9B%BD%E9%99%85%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%E9%99%A2&c=127&src=0&pn=0&sug=0&l=13&b=(13018367.350800684,3699342.0044737943;13070989.035911756,3724627.3843990294)&from=webmap&biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&device_ratio=1')
     }
   }
 };
