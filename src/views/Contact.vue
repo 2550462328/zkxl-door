@@ -23,10 +23,25 @@
           <div class="label">厂址</div>
           <div>| &nbsp;淮南市山南新区高新区双创中心二期厂房</div>
         </div>
+        <div class="item">
+          <div class="label">公司电话</div>
+          <div>| &nbsp;0551-63468772</div>
+        </div>
+        <div class="item">
+          <div class="label">网址</div>
+          <div>| &nbsp;www.zkxl.net</div>
+        </div>
+        <div class="item">
+          <div class="label">邮箱</div>
+          <div>| &nbsp;zk-stars@139.com</div>
+        </div>
       </div>
       <div class="right">
         <img src="../assets/image/qr.jpg" alt="">
       </div>
+    </div>
+    <div class="map">
+      <img src="../assets/image/page8/map.jpg" alt="">
     </div>
   </div>
 </template>
@@ -52,15 +67,15 @@ export default {
   position: relative;
   overflow: hidden;
   .banner{
-    height: 532px;
-    background: url(../assets/image/page8/banner.png) no-repeat center;
+    height: 380px;
+    background: url(../assets/image/page8/banner.jpg) no-repeat center;
     color: #fff;
     font-size: 45px;
-    line-height: 465px;
+    line-height: 380px;
     text-align: center;
   }
   .content{
-    padding: 50px 0 150px;
+    padding: 100px 0 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,6 +115,10 @@ export default {
         width: 100%;
       }
     }
+  }
+  .map{
+    text-align: center;
+    margin-bottom: 150px;
   }
 }
 </style>
