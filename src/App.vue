@@ -192,4 +192,7 @@ body {
   line-height: 70px;
   font-size: 18px;
 }
+.el-menu.el-menu--horizontal{
+  border: none;
+}
 </style>
