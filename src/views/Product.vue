@@ -1,10 +1,10 @@
 <template>
   <div class="product">
     <div class="banner">
-      <div>产品中心</div>
+      <div>{{ $route.query.name }}</div>
     </div>
     <div class="product-content ">
-      <div class="one module">
+      <div v-if="$route.query.id === '1'" class="one module">
         <div class="main">
           <div class="title">蓝牙便携式医废称重器</div>
           <div class="bd">
@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="one module">
+      <div v-if="$route.query.id === '2'" class="one module">
         <div class="main">
           <div class="title">基于物联网的医废称重器</div>
           <div class="bd">
@@ -39,7 +39,7 @@
           </div>
         </div>
       </div>
-      <div class="one module">
+      <div v-if="$route.query.id === '3'" class="one module">
         <div class="main">
           <div class="title">危废称重一体化终端控制箱</div>
           <div class="bd">
@@ -60,7 +60,7 @@
           </div>
         </div>
       </div>
-      <div class="one module">
+      <div v-if="$route.query.id === '4'" class="one module">
         <div class="main">
           <div class="title">智能物联网电子磅秤</div>
           <div class="bd" style="align-items: center;">
@@ -80,7 +80,7 @@
           </div>
         </div>
       </div>
-      <div class="one module">
+      <div v-if="$route.query.id === '5'" class="one module">
         <div class="main">
           <div class="title">边缘计算智能分析盒子</div>
           <div class="bd" style="align-items: center;">
@@ -262,11 +262,11 @@ export default {
   height: 100%;
   background-color: #f3f3f3;
   .banner{
-    height: 532px;
-    background: url(../assets/image/page5/banner.png) no-repeat center;
+    height: 380px;
+    background: url(../assets/image/page5/banner-detail.jpg) no-repeat center;
     color: #fff;
     font-size: 45px;
-    line-height: 465px;
+    line-height: 380px;
     text-align: center;
   }
   .module{
