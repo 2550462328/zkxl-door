@@ -39,9 +39,9 @@
         </ul>
       </swiper-slide>
       <swiper-slide class="swiper-slide slide-three">
-        <div class="page">
-          <h3>最新资讯</h3>
-          <p>Latest News</p>
+        <div class="page" @click="goProduct">
+          <h3>产品中心</h3>
+          <p>Product center  </p>
         </div>
         <div class="news-content">
           <div class="news-content-box">
@@ -176,6 +176,11 @@ export default {
   mounted() {
     this.loading = false;
   },
+  methods:{
+    goProduct(){
+      this.$router.push({name: 'productList'})
+    }
+  }
 };
 </script>
  

@@ -12,7 +12,7 @@
             <div class="intro">
                 <div class="title">医疗废弃物溯源管理系统</div>
                 <div class="paragraph">基于物联网技术的"互联网+"医疗废弃物溯源管理系统能够跟踪医废在院内流转的全过程。系统使用二维码、RFID以及4G技术为核心，以电子秤，手持机、管理后台为应用终端。从而实现院方对医废的在科室打包、院内运输、暂存点入库、出库过程中的实时监管，在大力加强医疗安全管理、生态卫生治理的同时节约了人力成本。</div>
-                <a href="" target="_blank">进入系统</a>
+                <a href="http://ay2fy.yf.ahwfy.net/login?redirect=%2Fdashboard" target="_blank">进入系统</a>
             </div>
             
         </div>

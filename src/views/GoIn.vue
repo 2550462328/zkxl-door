@@ -1,11 +1,10 @@
 <template>
   <div class="go-in">
     <div class="banner">
-      <img src="../assets/image/page2/banner.jpg" alt="">
     </div>
     <div class="section" v-loading="loading">
       <div class="section-content">
-        <div class="content-summary module">
+        <div class="content-summary module" id="content-summary">
           <div class="hd">
             <p class="title">公司简介</p>
             <p class="eTitle">COMPANY PROFILE</p>
@@ -54,7 +53,7 @@
           
         </div>
         <!-- 公司荣誉 -->
-        <div class="content-honor module">
+        <div class="content-honor module" id="content-honor">
           <div class="honor-big-img">
             <el-dialog :title="dialogTitle" :visible.sync="dialogTableVisible">
               <img v-lazy="dialogUrl" alt />
@@ -81,7 +80,7 @@
               </li>
             </ul>
         </div>
-        <div class="content-case module">
+        <div class="content-case module" id="content-case">
           <div class="hd">
             <p class="title">企业案例</p>
             <p class="eTitle">ENTERPRISE CASE</p>
@@ -91,7 +90,7 @@
           </div>
         </div>
         <!-- 团队风采 -->
-        <div class="content-team module">
+        <div class="content-team module" id="content-team">
           <div class="hd">
             <p class="title">团队风采</p>
             <p class="eTitle">TEAM</p>
@@ -210,37 +209,27 @@ export default {
       dialogTitle: ""
     };
   },
+  watch:{
+    '$route.query.part': {
+      handler(val){
+        if(!val) return;
+        this.$nextTick(() => {
+          if(!this.first){
+            this.first = 1;
+            setTimeout(() => {
+              document.querySelector('#'+ val).scrollIntoView && document.querySelector('#'+ val).scrollIntoView({behavior: "smooth"});
+            },1000)
+          }else{
+            document.querySelector('#'+ val).scrollIntoView && document.querySelector('#'+ val).scrollIntoView({behavior: "smooth"});
+          }
+        })
+      },
+      immediate:true,
+    }
+  },
   mounted() {
     this.loading = false;
-    this.$http
-      .all([
-        this.$http.get("Honor/GetHonorAll"),
-        this.$http.get("Enterprise/GetEnterpriseAll"),
-        this.$http.get(`Team/GetTeamAll`),
-        this.$http.get(`Course/GetCourseAll`)
-      ])
-      .then(
-        this.$http.spread(
-          (responseHonor, responseEnterprise, responseTeam, responseCourse) => {
-            this.partnerImg = responseEnterprise.data;
-            this.teamItem = responseTeam.data;
-
-            var groupCount = Math.ceil(responseCourse.data.length / 2);
-            window.console.log(groupCount);
-            for (let i = 0; i < groupCount; i++) {
-              let img2 = [];
-              for (let j = 0; j < 2; j++) {
-                if (responseCourse.data.length - 1 >= i * 2 + j) {
-                  img2.push(responseCourse.data[i * 2 + j]);
-                }
-              }
-              this.courseList.push(img2);
-            }
-            window.console.log(this.courseList);
-            this.loading = false;
-          }
-        )
-      );
+    
   }
 };
 </script>
@@ -260,9 +249,12 @@ export default {
   position: relative;
   overflow: hidden;
   .banner{
-    img{
-      width: 100%;
-    }
+    height: 380px;
+    background: url(../assets/image/page2/banner.jpg) no-repeat center;
+    color: #fff;
+    font-size: 45px;
+    line-height: 380px;
+    text-align: center;
   }
   .module{
     .hd{

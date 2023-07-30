@@ -10,7 +10,6 @@
         <div class="etitle">us</div>
       </div>
       <div class="mid">
-        <p>行政地址：</p>
         <div class="item">
           <div class="label">总部</div>
           <div>| &nbsp;合肥市广西路中国科学技术大学国际金融研究院四号楼</div>
@@ -40,7 +39,7 @@
         <img src="../assets/image/qr.jpg" alt="">
       </div>
     </div>
-    <div class="map">
+    <div class="map" @click="goMap">
       <img src="../assets/image/page8/map.jpg" alt="">
     </div>
   </div>
@@ -51,6 +50,11 @@ import Banner from "../components/Banner";
 export default {
   components: {
     Banner
+  },
+  methods: {
+    goMap(){
+      window.open('https://map.baidu.com/search/%E4%B8%AD%E5%9B%BD%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E5%9B%BD%E9%99%85%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%E9%99%A2/@13057358.438977566,3704769.91183955,15.59z?querytype=s&da_src=shareurl&wd=%E4%B8%AD%E5%9B%BD%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E5%9B%BD%E9%99%85%E9%87%91%E8%9E%8D%E7%A0%94%E7%A9%B6%E9%99%A2&c=127&src=0&pn=0&sug=0&l=13&b=(13018367.350800684,3699342.0044737943;13070989.035911756,3724627.3843990294)&from=webmap&biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&device_ratio=1')
+    }
   }
 };
 </script>
@@ -117,6 +121,7 @@ export default {
     }
   }
   .map{
+    cursor: pointer;
     text-align: center;
     margin-bottom: 150px;
   }
