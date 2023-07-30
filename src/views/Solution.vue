@@ -30,32 +30,11 @@
             </div>
         </div>
         <div v-if="newstype === 1" class="content-wrapper">
-            <div class="side-nav">
+            <div class="side-nav" ref="sideNav">
                 <div class="hd">卫生健康解决方案</div>
                 <div class="bd">
-                    <div class="item active">
-                        
-                        <div class="text"> 医疗废弃物多部门协同监管平台</div>
-                        <div class="arrow"></div>
-                    </div>
-                    <div class="item">
-                        
-                        <div class="text"> 医疗废弃物院内在线监管系统</div>
-                        <div class="arrow"></div>
-                    </div>
-                    <div class="item">
-                        
-                        <div class="text"> 职业健康分级分类执法综合平台</div>
-                        <div class="arrow"></div>
-                    </div>
-                    <div class="item">
-                        
-                        <div class="text"> 水质在线监测平台</div>
-                        <div class="arrow"></div>
-                    </div>
-                    <div class="item">
-                        
-                        <div class="text"> 鼠铒站综合布防巡检管理系统</div>
+                    <div v-for="item in tabs" :key="item.value" class="item" :class="item.value === current ? 'active' : ''" @click="switchTab(item.value)">
+                        <div class="text"> {{ item.name }}</div>
                         <div class="arrow"></div>
                     </div>
                 </div>
@@ -78,34 +57,47 @@
                     </div>
                 </div>
             </div>
-            <div class="module">
+            <div v-if="current === '1'" class="module">
                 <div class="main">
-                    <div class="hd">医疗废弃物多部门协同监管平台</div>
                     <div class="bd">
                         <div class="pic-text">
                             <div class="pic"><img src="../assets/image/page4/tu-4.png" alt=""></div>
+                            <div class="tit">
+                                <div class="left-arrow"></div>
+                                <div class="tit-v">平台介绍</div>
+                                <div class="right-arrow"></div>
+                            </div>
                             <div class="text text-indent">借助互联网、物联网、云计算技术，使医疗机构废弃物的管理进入信息化通道，实时、有效、可视的监控医疗机构废弃物的全生命周期，防止医疗机构废弃物流失导致对社会环境造成危害。通过“医废处置机构协同方案”和“生活垃圾信息化管理协同方案”，逐步将垃圾、污水、污泥等源头单位及处置机构纳入监管平台，为管理部门提供便捷高效的可预警、可监控、可追溯、可共享的信息化管理平台，实现各责任部门对辖区医疗机构废弃物及其他废弃物的全过程监管，形成闭环式监控体系。</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="module">
+            <div v-if="current === '2'" class="module">
                 <div class="main">
-                    <div class="hd">医疗废弃物院内在线监管系统</div>
                     <div class="bd">
                         <div class="pic-text">
-                            <div class="text text-indent">通过物联网、大数据技术形成医废全程智能化管理，系统平台具备医废追溯管理、实时预警、在线追溯、视频监控、三联单管理等功能；实时接收展示医疗废物各流转环节数据信息，系统在线收集医疗卫生机构的医废信息，从医废归类、交接、转移、运输、暂存各个环节进行过程监控，避免漏洞环节导致医废流失，同时有效提升医废交接运输过程的效率。帮助医疗机构和卫生监管部门解决医废管理问题。</div>
                             <div class="pic"><img src="../assets/image/page4/tu-5.png" alt=""></div>
+                            <div class="tit">
+                                <div class="left-arrow"></div>
+                                <div class="tit-v">平台介绍</div>
+                                <div class="right-arrow"></div>
+                            </div>
+                            <div class="text text-indent">通过物联网、大数据技术形成医废全程智能化管理，系统平台具备医废追溯管理、实时预警、在线追溯、视频监控、三联单管理等功能；实时接收展示医疗废物各流转环节数据信息，系统在线收集医疗卫生机构的医废信息，从医废归类、交接、转移、运输、暂存各个环节进行过程监控，避免漏洞环节导致医废流失，同时有效提升医废交接运输过程的效率。帮助医疗机构和卫生监管部门解决医废管理问题。</div>
+
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="module">
+            <div v-if="current === '3'" class="module">
                 <div class="main">
-                    <div class="hd">职业健康分级分类执法综合平台</div>
                     <div class="bd">
                         <div class="pic-text">
                             <div class="pic"><img src="../assets/image/page4/tu-6.png" alt=""></div>
+                            <div class="tit">
+                                <div class="left-arrow"></div>
+                                <div class="tit-v">平台介绍</div>
+                                <div class="right-arrow"></div>
+                            </div>
                             <div class="text">
                                 <h5><span>1</span>线上预约</h5>
                                 <p>从业人员预防性健康体检系统由后台管理系统和微信公众号两部分组成。市民通过微信公众号填写基础信息进行预约登记。从业人员通过微信公众号进行查询、下载，同时支持到窗口打印机一键制证。执法人员可通过微信公众号，输入身份号，进行健康证查验真伪。</p>
@@ -151,17 +143,22 @@
                     </div>
                 </div>
             </div>
-            <div class="module">
+            <div v-if="current === '4'" class="module">
                 <div class="main">
-                    <div class="hd">水质在线监测平台</div>
                     <div class="bd">
                         <div class="pic-text">
+                            
+                            <div class="pic"><img src="../assets/image/page4/tu-2.png" alt=""></div>
+                            <div class="tit">
+                                <div class="left-arrow"></div>
+                                <div class="tit-v">平台介绍</div>
+                                <div class="right-arrow"></div>
+                            </div>
                             <div class="text">
                                 <p class="text-indent">基于环境网格化监测系统的一套实时在线监控，数据 24 小时全天侯实时接收、保存，下载、图表显示、智能分析、智能告警提醒、联动控制声光报警等功能。系统主要包含大屏显示系统、终端显示及控制器、各类型检测的传感器、远程移动端、云端数据平台。主要检测水体的各项指标（余氯、PH值 、浊度、 COD 、温度等关键指标）；当出现异常时，可及时告警。</p>
                                 <p class="text-indent">本系统可广泛用于水厂、饮用水、自来水、矿泉水，食品等部门的水质检测，是常用的实时在线监测系统。具有 HJ/T212-2017、工控协议等数据协议覆盖全，系统具有集成度高，功能丰富，安全可靠和开放兼容性好等特点，实现了前端设备“ 云端管理 ， 自动报警，远程查看”的物联网水质管理模式。</p>
                                 <p class="text-indent">饮用水水质在线监测装置由进水电磁阀，流通池，各个传感器，信号调理和数据采集装置，4G无线传输到信息平台。</p>
                             </div>
-                            <div class="pic"><img src="../assets/image/page4/tu-2.png" alt=""></div>
                         </div>
                         <div class="additional">
                             <div class="name name2">
@@ -176,12 +173,16 @@
 
                 </div>
             </div>
-            <div class="module">
+            <div v-if="current === '5'" class="module">
                 <div class="main">
-                    <div class="hd">鼠铒站综合布防巡检管理系统</div>
                     <div class="bd">
                         <div class="pic-text">
                             <div class="pic"><img src="../assets/image/page4/tu-6.png" alt=""></div>
+                            <div class="tit">
+                                <div class="left-arrow"></div>
+                                <div class="tit-v">平台介绍</div>
+                                <div class="right-arrow"></div>
+                            </div>
                             <div class="text">
                                 <p class="text-indent">卫生有害生物综合防治管理系统通过一个智能模块来接收数据，再通过红外感应来抓取虫害数据，然后通过通讯网络上传到云平台，即到达的电脑端和手机端。接到报警后，维保人员可以根据定位到指定地点来维保，实现远程监控和实时上传的功能。</p>
                             </div>
@@ -213,13 +214,48 @@
     data() {
       return {
         newstype: 1,
+        current: '1',
+        tabs: [
+            {
+                name: '医疗废弃物多部门协同监管平台',
+                value: '1',
+            },
+            {
+                name: '医疗废弃物院内在线监管系统',
+                value: '2',
+            },
+            {
+                name: '职业健康分级分类执法综合平台',
+                value: '3',
+            },
+            {
+                name: '水质在线监测平台',
+                value: '4',
+            },
+            {
+                name: '鼠铒站综合布防巡检管理系统',
+                value: '5',
+            },
+        ]
       };
       
     },
     methods: {
+        switchTab(val){
+            this.current = val;
+        }
     },
     mounted() {
+        window.onscroll = (e)=>{
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            if(scrollTop >= 480){
+                this.$refs.sideNav.style.top =  0;
+            }else{
+                this.$refs.sideNav.style.top = (480 - scrollTop) + 'px';
 
+            }
+            
+        }
     },
     watch: {
     }
@@ -235,7 +271,7 @@
   .solution {
     width: 100%;
     height: 100%;
-    background-color: #f3f3f3;
+    background-color: #fff;
     position: relative;
     overflow: hidden;
     .banner{
@@ -284,7 +320,7 @@
         padding: 36px 50px;
         margin-bottom: 20px;
         .main{
-            width: 1460px;
+            width: 1200px;
             margin: 0 auto;
             .hd{
                 font-size: 24px;
@@ -294,15 +330,13 @@
             }
             .bd{
                 .pic-text{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
                     .text-indent{
                         line-height: 32px;
                         text-indent: 36px;
                     }
                     .text{
-                        width: 630px;
+                        border: 1px #d5d5d5 solid;
+                        padding: 20px;
                         font-size: 18px;
                         line-height: 36px;
                         text-align: justify;
@@ -338,10 +372,32 @@
                         
                     }
                     .pic{
-                        width: 785px;
-                        padding-top: 20px;
+                        text-align: center;
                         img{
                             width: 100%;
+                        }
+                    }
+                    .tit{
+                        color: #5d8ae4;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 20px 0 40px;
+                        .left-arrow{
+                            width: 32px;
+                            height: 24px;
+                            background: url(../assets/image/page4/left.png) no-repeat center;
+                        }
+                        .right-arrow{
+                            width: 32px;
+                            height: 24px;
+                            background: url(../assets/image/page4/right.png) no-repeat center;
+                            
+                        }
+                        .tit-v{
+                            font-weight: bold;
+                            margin: 0 20px;
+                            font-size: 20px;
                         }
                     }
                 }
@@ -438,12 +494,14 @@
     }
     .content-wrapper{
         position: relative;
+        padding-left: 400px;
         .side-nav{
-            position: absolute;
+            position: fixed;
+            z-index: 99;
             background: #fff;
             width: 316px;
-            left: 50px;
-            top: 0;
+            left: 160px;
+            top: 480px;
             .hd{
                 height: 40px;
                 line-height: 40px;
