@@ -45,6 +45,11 @@ let kejianrouter = new Router({
       component: () => import('./views/ProductList.vue'),
     },
     {
+      path: '/join-us',
+      name: 'JoinUs',
+      component: () => import('./views/JoinUs.vue'),
+    },
+    {
       path: '/case',
       name: 'case',
       component: () => import('./views/Case.vue')
