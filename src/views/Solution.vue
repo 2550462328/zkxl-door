@@ -239,12 +239,12 @@
     position: relative;
     overflow: hidden;
     .banner{
-      height: 532px;
-      background: url(../assets/image/page4/banner.png) no-repeat center;
-      color: #fff;
+      height: 380px;
+      background: url(../assets/image/page4/banner.jpg) no-repeat center;
+      color: #333;
       font-size: 45px;
       font-weight: 400;
-      line-height: 465px;
+      line-height: 380px;
       text-align: center;
     }
     .content-nav-bg{

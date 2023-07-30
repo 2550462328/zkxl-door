@@ -150,12 +150,12 @@ export default {
   position: relative;
   overflow: hidden;
   .banner{
-    height: 532px;
-    background: url(../assets/image/page3/banner.png) no-repeat center;
+    height: 380px;
+    background: url(../assets/image/page3/banner.jpg) no-repeat center;
     color: #fff;
     font-size: 45px;
     font-weight: 400;
-    line-height: 465px;
+    line-height: 380px;
     text-align: center;
   }
   &-section {

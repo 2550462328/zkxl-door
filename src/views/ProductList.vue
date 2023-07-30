@@ -83,13 +83,13 @@ export default {
 .product {
   width: 100%;
   height: 100%;
-  background-color: #f3f3f3;
+  background-color: #fff;
   .banner{
-    height: 532px;
-    background: url(../assets/image/page5/banner.png) no-repeat center;
+    height: 380px;
+    background: url(../assets/image/page5/banner.jpg) no-repeat center;
     color: #fff;
     font-size: 45px;
-    line-height: 465px;
+    line-height: 380px;
     text-align: center;
   }
   .product-content{

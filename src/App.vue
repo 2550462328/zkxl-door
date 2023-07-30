@@ -117,17 +117,16 @@ body {
 .el-header {
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
   //background-color: #fff;
 
   .logo {
     width: 280px;
-    padding: 10px;
+    height: 37px;
     img {
       width: 100%;
-      line-height: 60px;
     }
   }
 }
@@ -182,5 +181,15 @@ body {
       line-height: 30px;
     }
   }
+}
+</style>
+<style>
+.el-header{
+  height: 70px !important;
+}
+.el-menu--horizontal>.el-menu-item{
+  height: 70px;
+  line-height: 70px;
+  font-size: 18px;
 }
 </style>
