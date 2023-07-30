@@ -248,6 +248,7 @@
     mounted() {
         window.onscroll = (e)=>{
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            if(!this.$refs.sideNav) return;
             if(scrollTop >= 480){
                 this.$refs.sideNav.style.top =  0;
             }else{
@@ -256,6 +257,9 @@
             }
             
         }
+    },
+    beforeDestroy(){
+        window.onscroll = null;
     },
     watch: {
     }
