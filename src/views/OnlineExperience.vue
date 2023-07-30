@@ -1,7 +1,10 @@
 <template>
     <div class="online-experience">
       <div class="banner">
-        <div>在线体验</div>
+        <div class="text">
+          <div class="tit">在线体验</div>
+          <div class="des">请联系客户经理索取体验帐号</div>
+        </div>
       </div>
       <div class="content">
         <div class="item">
@@ -43,13 +46,26 @@
   position: relative;
   overflow: hidden;
   .banner{
-    height: 532px;
-    background: url(../assets/image/page7/banner.png) no-repeat center;
+    height: 380px;
+    background: url(../assets/image/page7/banner.jpg) no-repeat center;
     color: #fff;
-    font-size: 45px;
-    font-weight: 400;
-    line-height: 465px;
+    
+    
+    line-height: 380px;
     text-align: center;
+    .tit{
+      font-size: 45px;
+      font-weight: 400;
+      line-height: 68px;
+    }
+    .des{
+      font-size: 34px;
+      line-height: 68px;
+    }
+    .text{
+      padding-top: 115px;
+      opacity: 0.8;
+    }
   }
   .content{
     width: 1212px;
