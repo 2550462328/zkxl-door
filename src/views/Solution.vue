@@ -30,6 +30,54 @@
             </div>
         </div>
         <div v-if="newstype === 1" class="content-wrapper">
+            <div class="side-nav">
+                <div class="hd">卫生健康解决方案</div>
+                <div class="bd">
+                    <div class="item active">
+                        
+                        <div class="text"> 医疗废弃物多部门协同监管平台</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="item">
+                        
+                        <div class="text"> 医疗废弃物院内在线监管系统</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="item">
+                        
+                        <div class="text"> 职业健康分级分类执法综合平台</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="item">
+                        
+                        <div class="text"> 水质在线监测平台</div>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="item">
+                        
+                        <div class="text"> 鼠铒站综合布防巡检管理系统</div>
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+                <div class="ft">
+                    <div class="news-content-item">
+                        <div class="news-content-item-info">
+                            <p>电话：0551-63468772</p>
+                            <p>邮箱：zk-stars@139.com</p>
+                            <p>地址：中国科学技术大学国际金融院四号楼</p>
+                        </div>
+                        <div class="news-content-item-flex">
+                            <div class="news-content-item-flex-box">
+                            <img class="er" src="../assets/image/page1/er.png" alt="">
+                            </div>
+                            <div class="news-content-item-flex-box">
+                            <p style="padding-top: 24px;">关注公众号</p>
+                            <p>了解更多详情</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="module">
                 <div class="main">
                     <div class="hd">医疗废弃物多部门协同监管平台</div>
@@ -383,6 +431,120 @@
                                 border-radius: 50%;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    .content-wrapper{
+        position: relative;
+        .side-nav{
+            position: absolute;
+            background: #fff;
+            width: 316px;
+            left: 50px;
+            top: 0;
+            .hd{
+                height: 40px;
+                line-height: 40px;
+                color: #fff;
+                text-align: center;
+                background: #3c6397;
+            }
+            .bd{
+                margin-top: 5px;
+                .item{
+                    padding-left: 30px;
+                    padding-right: 20px;
+                    height: 30px;
+                    line-height: 30px;
+                    color: #8a8989;
+                    background: #ebebeb;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 2px;
+                    .text::before{
+                        content: '●';
+                        color: #ebebeb;
+                    }
+                    &:hover,&.active{
+                        cursor: pointer;
+                        color: #fff;
+                        background: #3c6397;
+                        .arrow{
+                            border-left-color: #fff;
+                        }
+                        .point{
+                            background: #fff;
+                        }
+                        .text::before{
+                            color: #ebebeb;
+                        }
+                    }
+                    .arrow{
+                        width: 0;
+                        height: 0;
+                        border-left: 8px solid #8a8989;
+                        border-top: 8px solid transparent;
+                        border-bottom: 8px solid transparent;
+                    }
+                }
+            }
+            .ft{
+                .news-content-item{
+                    height: 230px;
+                    background: #fff;
+                    border: 1px #c6c6c8 solid;
+                    box-sizing: border-box;
+                    padding: 26px 26px;
+                    img{
+                    height: 60px;
+                    }
+                    .news-content-item-title{
+                    margin-top: 10px;
+                    font-size: 18px;
+                    }
+                    .link{
+                        font-size: 12px;
+                        display: inline-block;
+                        margin-top: 50px;
+                        color: #4d81ad;
+                        border-bottom: 2px #4d81ad solid;
+                        cursor: pointer;
+                    }
+                }
+                .news-content-box{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+                .news-content-item-flex{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .news-content-item-flex-box{
+                    width: 110px;
+                    height: 110px;
+                    border: 1px #acacac solid;
+                    font-size: 12px;
+                    color: #909090;
+                    text-align: center;
+                    line-height: 30px;
+                    .er{
+                    width: 100%;
+                    height: 100%;
+                    }
+                }
+                .news-content-item-info{
+                    color: #333;
+                    font-size: 12px;
+                    border-left: 2px #a8a8a8 solid;
+                    padding-left: 8px;
+                    margin-bottom: 12px;
+                    p{
+                        margin-bottom: 4px;
                     }
                 }
             }

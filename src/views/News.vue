@@ -163,7 +163,7 @@ export default {
     //height: 1600px;
 
     &-content {
-      width: 1330px;
+      width: 1428px;
       //height: 1600px;
       margin: 0 auto;
       background-color: #fff;
@@ -195,7 +195,7 @@ export default {
       }
 
       .content-nav-item {
-        width: 1330px;
+        width: 1428px;
         margin: 0 auto 40px;
         display: flex;
         justify-content: flex-start;
@@ -209,7 +209,7 @@ export default {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          margin: 10px 10px;
+          margin: 26px;
           border: 1px solid #15669e;
           box-sizing: border-box;
           padding: 16px;
